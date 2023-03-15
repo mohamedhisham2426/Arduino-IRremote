@@ -1368,7 +1368,7 @@ hw_timer_t *s50usTimer; // set by timerConfigForReceive()
 void timerEnableReceiveInterrupt() {
     timerAlarmEnable (s50usTimer);
 }
-#if ESP_ARDUINO_VERSION < ESP_ARDUINO_VERSION_VAL<<(2, 0, 2)>>
+#if ESP_ARDUINO_VERSION < ESP_ARDUINO_VERSION_VAL<<(2, 0, 2)
 void timerDisableReceiveInterrupt() {
     if (s50usTimer != NULL) {
         timerEnd(s50usTimer);
